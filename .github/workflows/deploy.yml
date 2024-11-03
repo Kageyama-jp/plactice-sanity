@@ -28,8 +28,8 @@ jobs:
           # package-manager: pnpm@latest # 依存関係のインストールとサイトのビルドに使用する Node パッケージマネージャ。ロックファイルに基づいて自動的に検出されます。(オプション)
       - name: Build
         env:
-          PUBLIC_SANITY_PROJECT_ID: ${{ secrets.PUBLIC_SANITY_PROJECT_ID }}
-          PUBLIC_SANITY_DATASET: ${{ secrets.PUBLIC_SANITY_DATASET }}
+          VITE_SANITY_STUDIO_PROJECT_ID: ${{ secrets.VITE_SANITY_STUDIO_PROJECT_ID }}
+          VITE_SANITY_STUDIO_DATASET: ${{ secrets.VITE_SANITY_STUDIO_DATASET }}
 
   deploy:
     needs: build
